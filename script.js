@@ -68,7 +68,7 @@ function done() {
     if (counterArr.every(isEmpty)) {
         const result = `
         <p class="results-text">
-            In total ${name ? name : "Speaker"} did not use any!
+            In total ${name ? name : "The Speaker"} did not use any!
         </p>
         `;
         resultContainer.insertAdjacentHTML("beforeend", result);
