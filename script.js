@@ -75,7 +75,7 @@ function done() {
     } else {
         const result = `
         <p class="results-text">
-            In total ${name ? name : "Speaker"}  used: 
+            In total ${name ? name : " The Speaker"}  used: 
             ${
                 counterArr[0] > 0
                     ? counterArr[0] + ` ${fillerWords[0]}(s)`
