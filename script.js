@@ -63,9 +63,19 @@ function clear() {
 // Captures all values then prints message to results container
 function done() {
     let name = document.getElementById("name").value;
-    const result = `
+    // Checks if current array value is equal to 0
+    let isEmpty = (currentValue) => currentValue === 0;
+    if (counterArr.every(isEmpty)) {
+        const result = `
         <p class="results-text">
-            In total ${name ? name : "Speaker"}  had: 
+            In total ${name ? name : "Speaker"} did not use any!
+        </p>
+        `;
+        resultContainer.insertAdjacentHTML("beforeend", result);
+    } else {
+        const result = `
+        <p class="results-text">
+            In total ${name ? name : "Speaker"}  used: 
             ${
                 counterArr[0] > 0
                     ? counterArr[0] + ` ${fillerWords[0]}(s)`
@@ -108,8 +118,8 @@ function done() {
             } 
         </p>
         `;
-
-    resultContainer.insertAdjacentHTML("beforeend", result);
+        resultContainer.insertAdjacentHTML("beforeend", result);
+    }
 
     // Reset function
     clear();
