@@ -66,14 +66,46 @@ function done() {
     const result = `
         <p class="results-text">
             In total ${name ? name : "Speaker"}  had: 
-            ${counterArr[0] > 0 ? counterArr[0] + " Umm(s)" : " "} 
-            ${counterArr[1] > 0 ? counterArr[1] + " And(s)" : " "} 
-            ${counterArr[2] > 0 ? counterArr[2] + " Like(s)" : " "} 
-            ${counterArr[3] > 0 ? counterArr[3] + " Well(s)" : " "} 
-            ${counterArr[4] > 0 ? counterArr[4] + " So(s)" : " "} 
-            ${counterArr[5] > 0 ? counterArr[5] + " But(s)" : " "} 
-            ${counterArr[6] > 0 ? counterArr[6] + " Uhh(s)" : " "} 
-            ${counterArr[7] > 0 ? counterArr[7] + " Pause(s)" : " "} 
+            ${
+                counterArr[0] > 0
+                    ? counterArr[0] + ` ${fillerWords[0]}(s)`
+                    : " "
+            } 
+            ${
+                counterArr[1] > 0
+                    ? counterArr[1] + ` ${fillerWords[1]}(s)`
+                    : " "
+            } 
+            ${
+                counterArr[2] > 0
+                    ? counterArr[2] + ` ${fillerWords[2]}(s)`
+                    : " "
+            } 
+            ${
+                counterArr[3] > 0
+                    ? counterArr[3] + ` ${fillerWords[3]}(s)`
+                    : " "
+            } 
+            ${
+                counterArr[4] > 0
+                    ? counterArr[4] + ` ${fillerWords[4]}(s)`
+                    : " "
+            } 
+            ${
+                counterArr[5] > 0
+                    ? counterArr[5] + ` ${fillerWords[5]}(s)`
+                    : " "
+            } 
+            ${
+                counterArr[6] > 0
+                    ? counterArr[6] + ` ${fillerWords[6]}(s)`
+                    : " "
+            } 
+            ${
+                counterArr[7] > 0
+                    ? counterArr[7] + ` ${fillerWords[7]}(s)`
+                    : " "
+            } 
         </p>
         `;
 
