@@ -48,7 +48,11 @@ function increment(id) {
 }
 // Decrement function
 function decrement(id) {
-    switchValue(id, "-");
+    if (counterArr[id] > 0) {
+        switchValue(id, "-");
+    } else {
+        return;
+    }
 }
 
 // Resets all values back to start
