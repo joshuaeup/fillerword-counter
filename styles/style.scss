@@ -1,0 +1,123 @@
+$border-color: rgba(189, 189, 189, 0.205);
+$primary-color: #4798db;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, #4d6e9c, #93a8be);
+}
+
+#nav-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 0 3rem;
+    font-size: 1.9rem;
+    background-color: transparent;
+    height: 5rem;
+
+    #nav-title {
+        justify-self: center;
+        color: white;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+
+    #name,
+    #submit {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        padding: 0.3rem 0.4rem;
+    }
+
+    #submit {
+        border: solid transparent 1px;
+        padding: 0.3rem 1.3rem;
+        color: white;
+        background: $primary-color;
+    }
+}
+
+#main-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+
+    .sub-container {
+        display: grid;
+        justify-content: stretch;
+        text-align: center;
+        border: solid 2px white;
+        padding: 1rem;
+
+        .sub-counter {
+            font-size: 6rem;
+            color: white;
+        }
+
+        .sub-title {
+            font-size: 4rem;
+            color: white;
+        }
+
+        .btn-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+
+            .btn {
+                border: solid transparent 1px;
+                padding: 0.3rem 0;
+                background-color: $primary-color;
+                color: white;
+                font-size: 2rem;
+            }
+
+            .increment {
+                border-right: $border-color solid 0.5px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+
+            .decrement {
+                border-left: $border-color solid 0.5px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }
+    }
+}
+
+#result-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 4rem;
+
+    #result-input-container {
+        justify-self: center;
+    }
+
+    #results {
+        justify-self: center;
+        padding: 0 5rem;
+
+        .results-text {
+            font-size: 1.8rem;
+            color: white;
+            margin: 1rem 0;
+        }
+    }
+}
